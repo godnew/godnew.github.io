@@ -1,0 +1,10 @@
+auto: true
+
+markdown: kramdown
+kramdown:
+    input: GFM
+rouge: true
+permalink: /:title
+
+title: 忍把浮名，换了代码几行
+feed: /atom.xml
