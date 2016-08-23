@@ -3,6 +3,7 @@ layout: default
 ---
 
 <link rel="stylesheet" href="/js/prettify/prettify.css" />
+<link rel="stylesheet" href="/css/pagination.css"/>
 <style type="text/css">
   body {
     background: #e8e8e8;
@@ -30,12 +31,12 @@ layout: default
   </div>
   <div class="sidenav">
     <h2>程序人生</h2>
-    <ul class="artical-list">
+    <ul class="artical-list" style="display: none;">
       {% for post in site.categories.coding %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}
     </ul>
-
+      <div id="Searchresult"></div>
     <h2>生活随笔</h2>
     <ul class="artical-list">
       {% for post in site.categories.life %}
@@ -45,6 +46,36 @@ layout: default
   </div>
   {% include about.html %}
 </div>
+<div id="Pagination" class="pagination"><!-- 这里显示分页 --></div>
 
 <script src="/js/post.js" type="text/javascript"></script>
+<script src="/js/jquery.pagination.js"></script>
+<script>
+    $(function(){
+        //总数目
+        var length = $(".artical-list").children("li").length;
+        //从表单获取分页元素参数
+        var optInit = getOptionsFromForm();
+        $("#Pagination").pagination(length, optInit);
+
+        //-----------------------------------
+        function getOptionsFromForm(){
+            return { callback: pageselectCallback(), items_per_page: 5, num_display_entries: 5, num_edge_entries: 2, prev_text: "上一页", next_text: "下一页" };
+        }
+        //-------------------------------
+        function pageselectCallback(page_index, jq){
+            // 从表单获取每页的显示的列表项数目
+            var items_per_page = 7;
+            var max_elem = Math.min((page_index+1) * items_per_page, length);
+
+            $("#Searchresult").html("");
+            // 获取加载元素
+            for(var i=page_index*items_per_page;i<max_elem;i++){
+                $("#Searchresult").append($(".artical-list li:eq("+i+")").clone());
+            }
+            //阻止单击事件
+            return false;
+        }
+    });
+</script>
 <a id="scrollTop" href="javascript:scroll(0,0)">&#8657;</a>
