@@ -1,23 +1,4 @@
-<div id="disqus_container">
-  <div class="share-con">
-    <script type="text/javascript" charset="utf-8">
-      (function() {
-        var param = {
-          url: 'http://www.fangr.tk{{ page.url }}',
-          type: '6',
-          title: '《{{ page.title }}》' + '- {{ page.description }}',
-          ralateUid: '1801703902',
-          rnd: new Date().valueOf()
-        }
-        var temp = [];
-        for (var p in param) {
-          temp.push(p + '=' + encodeURIComponent(param[p] || ''))
-        }
-        document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="86" height="16"></iframe>')
-      })()
-    </script>
-  </div>
-    {% if site.duoshuo %}
+
     <div class="ds-thread" data-thread-key="{{ page.thread }}" data-url="{{ site.url }}{{ page.url }}" data-title="{{ page.title }}" />
     <script type="text/javascript">
         var duoshuoQuery = {short_name:"godnew"};
@@ -31,6 +12,4 @@
         })();
     </script>
     <!-- 多说公共JS代码 end -->
-    {% endif %}
-  <div id="disqus_thread"></div>
-</div>
+
