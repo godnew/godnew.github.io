@@ -27,7 +27,6 @@ layout: default
     <p class="entry-date">{{ page.date|date:"%Y-%m-%d" }}</p>
     {{ content }}
   </div>
-    {% include disqus.html %}
   <div class="sidenav">
     <h2>程序人生</h2>
     <ul class="artical-list">
@@ -43,6 +42,7 @@ layout: default
       {% endfor %}
     </ul>
   </div>
+  {% include disqus.html %}
   {% include about.html %}
 </div>
 
