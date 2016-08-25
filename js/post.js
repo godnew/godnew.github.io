@@ -156,7 +156,7 @@ $(document).ready(function(){
                             $('#menuIndex').prepend("<a id='scrollTop' href='javascript:scroll(0,0)' style='position: absolute;top:0;left:0;'>&#8657;</a>");
                         }else{
                             $('#menuIndex').css({
-                                position:'static'
+                                position:'relative'
                                 ,top:0
                                 ,left:0
                             });
