@@ -153,6 +153,7 @@ $(document).ready(function(){
                                 ,top:'20px'
                                 ,left:menuIndexLeft
                             });
+                            $('#menuIndex').prepend("<a id='scrollTop' href='javascript:scroll(0,0)' style='position: absolute;top:0;left:0;'>&#8657;</a>");
                         }else{
                             $('#menuIndex').css({
                                 position:'static'
@@ -193,7 +194,7 @@ $(document).ready(function(){
 
             //用js计算屏幕的高度
             $('#menuIndex').css('max-height',$(window).height()-80);
-            $('#menuIndex').prepend("<a id='scrollTop' href='javascript:scroll(0,0)' style='position: absolute;top:0;left:0;'>&#8657;</a>");
+
         }
     })();
 
