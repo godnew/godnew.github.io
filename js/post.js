@@ -161,6 +161,13 @@ $(document).ready(function(){
                                 ,left:0
                             });
                         }
+                        if(nowTop>(parseInt($(".entry").innerHeight())+90)){
+                            $('#menuIndex').css({
+                                position:'relative'
+                                ,top:0
+                                ,left:0
+                            });
+                        }
 
                         if(nowTop+60 > scrollTop[length-1]){
                             index = length;
