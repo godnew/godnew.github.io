@@ -161,7 +161,7 @@ $(document).ready(function(){
                                 ,left:0
                             });
                         }
-                        if(nowTop>(parseInt($(".entry").innerHeight())+90)){
+                        if(nowTop>(parseInt($(".entry").innerHeight())+90-parseInt($("#menuIndex").innerHeight()))){
                             $('#menuIndex').css({
                                 position:'relative'
                                 ,top:0
