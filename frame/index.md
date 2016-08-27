@@ -5,15 +5,15 @@ layout: home
 <div class="index-content coding">
   <div class="section">
     <ul class="artical-cate">
-      <li class="on"><a href="/coding"><span>程序人生</span></a></li>
+      <li ><a href="/coding"><span>程序人生</span></a></li>
       <li style="text-align:center"><a href="/life"><span>生活随笔</span></a></li>
-      <li style="text-align:center"><a href="/frame"><span>框框架架</span></a></li>
+      <li style="text-align:center" class="on"><a href="/frame"><span>框框架架</span></a></li>
     </ul>
 
     <div class="cate-bar"><span id="cateBar"></span></div>
 
     <ul class="artical-list">
-      {% for post in site.categories.coding %} {% if {{post.title}} !='Coming Conferences and Activities' %}
+      {% for post in site.categories.frame %} {% if {{post.title}} !='Coming Conferences and Activities' %}
       <li>
         <div class="table-article">
           <div class="col-title">
