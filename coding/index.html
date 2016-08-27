@@ -12,7 +12,7 @@ layout: home
     <div class="cate-bar"><span id="cateBar"></span></div>
 
     <ul class="artical-list">
-      {% for post in paginator.coding %} {% if {{post.title}} !='Coming Conferences and Activities' %}
+      {% for post in paginator.posts.coding %} {% if {{post.title}} !='Coming Conferences and Activities' %}
       <li>
         <div class="table-article">
           <div class="col-title">
