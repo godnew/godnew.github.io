@@ -5,6 +5,9 @@ kramdown:
     input: GFM
 rouge: true
 permalink: /:title
+paginate: 5
+paginate_path: "page:num"
+
 
 title: 我将成为新世界的神
 feed: /atom.xml
