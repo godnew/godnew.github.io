@@ -405,6 +405,10 @@ pre ol {
   background-image: url(http://o86qmsuit.bkt.clouddn.com/image/life_background.jpg);
 }
 
+.frame .aside {
+    background-image: url(../images/frame.gif);
+}
+
 .project .aside {
   background-image: url('https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*kTUZamBulGQZg1MW.jpeg')
 }

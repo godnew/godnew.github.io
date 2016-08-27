@@ -2,7 +2,7 @@
 layout: home
 ---
 
-<div class="index-content life">
+<div class="index-content frame">
   <div class="section">
     <ul class="artical-cate">
       <li><a href="/coding"><span>程序人生</span></a></li>
@@ -30,6 +30,6 @@ layout: home
 
 
   </div>
-  <div class="aside" style="background-image:(../images/frame.gif);">
+  <div class="aside" >
   </div>
 </div>
