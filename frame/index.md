@@ -30,6 +30,6 @@ layout: home
 
 
   </div>
-  <div class="aside">
+  <div class="aside" style="background-image:(../images/frame.gif);">
   </div>
 </div>
