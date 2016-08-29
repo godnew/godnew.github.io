@@ -11,7 +11,8 @@ layout: default
       var conLeft = $item.parent().offset().left;
       var left = spanLeft - conLeft;
       var width = $item.find('span').width();
-
+    console.log(spanLeft);
+        console.log(conLeft);
       if (noAni) {
         $('#cateBar').css({
           left: left,
