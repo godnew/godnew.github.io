@@ -12,7 +12,7 @@ layout: home
 
     <div class="cate-bar"><span id="cateBar"></span></div>
 
-    <ul class="artical-list">
+    <ul class="artical-list" id="itemContainer">
       {% for post in site.categories.coding %} {% if {{post.title}} !='Coming Conferences and Activities' %}
       <li>
         <div class="table-article">
@@ -27,7 +27,17 @@ layout: home
       </li>
       {% endif %} {% endfor %}
     </ul>
-
+      <div class="holder"></div>
+      <script>
+          $(function(){
+              $("div.holder").jPages({
+                  containerID : "itemContainer",
+                  previous : "←",
+                  next : "→",
+                  perPage : 5
+              });
+          });
+      </script>
 
   </div>
   <div class="aside">
