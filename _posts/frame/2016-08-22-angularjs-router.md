@@ -8,7 +8,7 @@ category: frame
 最近的一个项目中使用angularjs做个了展示型的网站，因为其路由的过程中的动画特效做起来很简单，所以这个项目就拿angualr来练练手，但在开发中遇到了个问题，就是不能使用锚链接了，这就尴尬了，展示型网站都很长，页面的导航条需要导航到页面的各个位置，然后页面上要有返回顶部的锚链接。所以这个问题就比较头疼了。网上查阅了大量资料，发现jsGen中封装的anchorScroll正是这个问题的解决办法。研究后对其改写了下。
 以下是我的实现过程：
 
->server.js
+###server.js
 
     App.factory('anchorScroll', function () {
         function toView(element, top, height) {
@@ -58,7 +58,7 @@ category: frame
         };
     });
 
->使用
+###使用
 
     controller：
         $scope.demo = function(){
