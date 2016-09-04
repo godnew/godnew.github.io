@@ -28,7 +28,7 @@ layout: default
     {{ content }}
   </div>
   <div class="sidenav">
-    <h2>程序人生</h2>
+    <h2>基础</h2>
     <ul class="artical-list">
       {% for post in site.categories.coding limit:3 %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -36,7 +36,7 @@ layout: default
         <li><a href="/coding">更多......</a></li>
     </ul>
 
-    <h2>生活随笔</h2>
+    <h2>案例</h2>
     <ul class="artical-list">
       {% for post in site.categories.life limit:3 %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
