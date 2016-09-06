@@ -5,6 +5,8 @@ description: 整理的一些使用的jquery小技巧
 category: coding
 ---
 
+## 一些jQuery小技巧
+
 ### 1.禁用页面的右键菜单
 
     $(function(){
