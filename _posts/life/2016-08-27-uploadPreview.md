@@ -5,15 +5,14 @@ category: life
 description: 图片上传时能够在页面上看到你上传的那张图片
 ---
 
-##uploadPreview
+## uploadPreview
+
 最近做到一个webapp项目，里面要实现的一个功能是这样的
 ![](images/life/uploadPreview1.png)
 ![](images/life/uploadPreview2.png)
-当照片点击上传后，边上能显示出你那个上传的照片。
+当照片点击上传后，边上能显示出你那个上传的照片。这个功能在webapp中很常见，所以做了个小插件，方便以后使用。
 
-这个功能在webapp中很常见，所以做了个小插件，方便以后使用。
-
-###以下是功能的实现：
+### 以下是功能的实现：
 
     var uploadPreview = function(setting) {
         /*
@@ -112,7 +111,7 @@ description: 图片上传时能够在页面上看到你上传的那张图片
 
 上述代码看似很长，但很多是为了对错误使用的处理以及兼容性的处理。
 
-###使用方法：
+### 使用方法：
 
     //界面构造(IMG标签外必须拥有DIV 而且必须给予DIV控件ID)
     <div id="imgdiv"><img id="imgShow" width="120" height="120" /></div>
