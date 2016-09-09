@@ -8,8 +8,7 @@ description: 图片上传时能够在页面上看到你上传的那张图片
 ## uploadPreview
 
 最近做到一个webapp项目，里面要实现的一个功能是这样的
-![](images/life/uploadPreview1.png)
-![](images/life/uploadPreview2.png)
+![](images/life/uploadPreview1.png)![](images/life/uploadPreview2.png)
 当照片点击上传后，边上能显示出你那个上传的照片。这个功能在webapp中很常见，所以做了个小插件，方便以后使用。
 
 ### 以下是功能的实现：
