@@ -34,7 +34,7 @@ category: coding
 
 在这个例子中可以通过Singleton.getInstance 来获取Singleton 类的唯一对象。这个例子比较简单，但并不实用，因为要通过Singleton.getInstance 来获取对象，而不是new出来对象。下面来改善下这个例子。
 
-### 例二
+### 例二：
 
     var getSingle = function( fn ){
         var result;
