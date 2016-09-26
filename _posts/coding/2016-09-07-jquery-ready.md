@@ -92,10 +92,6 @@ jQuery中的ready方法实现了当页面加载完成后才执行的效果，但
 
 ie老版本浏览器不支持DOMContentLoaded事件,ie所采用的是当dom未完成解析时,调用document的document.documentElement.doScroll(”left”)会出错这个小技巧便可得知dom有没有ready了.
 
-使用setTimeout(jQuery.ready)这句是表示延迟0毫秒调用,由于js是单线程的实际上它不会马上就调用,而是会尽可能快地调用,它告诉浏览器为当前任何挂起的事件运行完事件句柄并且完成了文档当前状态的更新后才调用. Arguments.callee即是外层的匿名函数,参数的调用者。
+使用setTimeout(jQuery.ready)这句是表示延迟0毫秒调用,由于js是单线程的实际上它不会马上就调用,而是会尽可能快地调用,它告诉浏览器为当前任何挂起的事件运行完事件句柄并且完成了文档当前状态的更新后才调用.
 
-opera的DOMContentLoaded事件发生后,其css样式是还没完全可用的,所以要特殊处理,就是判断每个css的tag都是不是enable了.
-
-safari中document.readyState的状态为loaded或complete时,css文件引入还未能确定是不是解析完了的,所以要通过判断其css文件数目
-
-最后,如果上面的hack都不支持的话,就用最保险的load事件,保证能执行到初始化代码.
+如果hack都不支持的话,就用最保险的load事件,保证能执行到初始化代码.
