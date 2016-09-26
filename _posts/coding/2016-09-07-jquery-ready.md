@@ -27,6 +27,7 @@ jQuery中的ready方法实现了当页面加载完成后才执行的效果，但
     };
 
 
+
     jQuery.ready.promise = function( obj ) {
       if ( !readyList ) {
         readyList = jQuery.Deferred();
@@ -69,6 +70,7 @@ jQuery中的ready方法实现了当页面加载完成后才执行的效果，但
       }
       return readyList.promise( obj );
     };
+
 
 
     ready: function( wait )
