@@ -90,14 +90,12 @@ jQuery中的ready方法实现了当页面加载完成后才执行的效果，但
       }
     },
 
-(1):这个主要是测出ie下的dom ready,原理在这里http://javascript.nwbox.com/IEContentLoaded/,利用在ie下.当dom未完成解析时,调用document的document.documentElement.doScroll(”left”)会出错这个小技巧便可得知dom有没有ready了.
+ie老版本浏览器不支持DOMContentLoaded事件,ie所采用的是当dom未完成解析时,调用document的document.documentElement.doScroll(”left”)会出错这个小技巧便可得知dom有没有ready了.
 
-(2):setTimeout( arguments.callee, 0 )这句是表示延迟0秒调用,实际上它不会马上就调用,而是会尽可能快地调用,它告诉浏览器为当前任何挂起的事件运行完事件句柄并且完成了文档当前状态的更新后才调用. Arguments.callee即是外层的匿名函数,参数的调用者
+setTimeout( arguments.callee, 0 )这句是表示延迟0秒调用,由于js是单线程的实际上它不会马上就调用,而是会尽可能快地调用,它告诉浏览器为当前任何挂起的事件运行完事件句柄并且完成了文档当前状态的更新后才调用. Arguments.callee即是外层的匿名函数,参数的调用者。
 
-(3):这个地方你也许觉得奇怪,为什么不在mozilla那里一起处理呢? 原因就是opera的DOMContentLoaded事件发生后,其css样式是还没完全可用的,所以要特殊处理,就是判断每个css的tag都是不是enable了.
+opera的DOMContentLoaded事件发生后,其css样式是还没完全可用的,所以要特殊处理,就是判断每个css的tag都是不是enable了.
 
-(4),(5):safari中document.readyState的状态为loaded或complete时,css文件引入还未能确定是不是解析完了的,所以要通过判断其css文件数目
+safari中document.readyState的状态为loaded或complete时,css文件引入还未能确定是不是解析完了的,所以要通过判断其css文件数目
 
-(6):最后,如果上面的hack都不支持的话…就用最保险的load事件,保证能执行到初始化代码.
-
-参考：![jQuery的ready方法实现原理分析](http://www.tuicool.com/articles/M7VnErM)
+最后,如果上面的hack都不支持的话,就用最保险的load事件,保证能执行到初始化代码.
